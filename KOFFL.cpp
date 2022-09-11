@@ -6,8 +6,12 @@ using namespace std;
 
 class Human
 {
-public:
+public: //-> private: 
 	string name;
+//publuc:
+
+	//Human(string m_name) конструктор
+	
 	void Upgrade_Health();
 	void Upgrade_Strenght();
 };
@@ -15,10 +19,10 @@ class Person: public Human {
 	int species; 
 	int health;
 	int money; 
-	char name;
+	char name; //зачем нужна это переменная 
 	int damage;
 	float block;
-	Person(int species){
+	Person(int species){ //Измените аргументы конструктора и прочитайте про наследование 
 		switch (species)
 		{
 		case 1:
@@ -88,12 +92,17 @@ class Discribtion
 
 int main() {
 	cout << "Write your name please" << endl;
-	Human name;
+	Human name; 
+	//1) Зачем создавать класс объект ЧЕЛОВЕЧЕСТВО -> когда нам НУЖЕН ПЕРСОНАЖ
+	//Person Killer("NAME", 1(ТИП ПЕРСОНАЖА)); так как PERSON это наследован от HUMAN он может менять переменные класса HUMAN для это вы должны проичтать про наследование 
+	//т.е констукрторы при наследовании
+	//я если хотите ввод элементов класс напишите перегрузку операта ввода ">>" //После можно будет делать cin >> Killer; 	
+	
 	cin >> name.name;//после того как добавите имя персонажа в класс human
 	//создайте тут класс human Human gus(fred,20);20-> это возраст 
 	//но можно по другому создать класс Person который наследуется от human. Это позволит в будем создавть разных людей.
 	//т.к класс human -> это человечество -> Person -> это будет один человек. А в человестве люди разные. Поэтому в person можно создавать разных типов людей.
-	cin >> name;
+	
 	Menu();
 	int variant;
 	cin >> variant;
