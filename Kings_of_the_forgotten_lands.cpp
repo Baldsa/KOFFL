@@ -37,7 +37,7 @@ private:
 public:
 	Bogatyr() : m_hp(150), m_damage(500), m_block(0.6), m_money(1500) {};
 	~Bogatyr();
-// 150  max 200 
+ 
 };
 
 struct monster
